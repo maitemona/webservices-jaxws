@@ -12,25 +12,25 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "obtenerCocheporCodigo", namespace = "http://com.ipartek.formacion/types")
 public class GetById {
 
-    @XmlElement(name = "arg0", namespace = "")
-    private Integer arg0;
+    @XmlElement(name = "codigo", namespace = "", required = true)
+    private Integer codigo;
 
     /**
      * 
      * @return
      *     returns Integer
      */
-    public Integer getArg0() {
-        return this.arg0;
+    public Integer getCodigo() {
+        return this.codigo;
     }
 
     /**
      * 
-     * @param arg0
-     *     the value for the arg0 property
+     * @param codigo
+     *     the value for the codigo property
      */
-    public void setArg0(Integer arg0) {
-        this.arg0 = arg0;
+    public void setCodigo(Integer codigo) {
+        this.codigo = codigo;
     }
 
 }

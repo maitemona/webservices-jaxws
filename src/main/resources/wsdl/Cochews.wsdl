@@ -37,7 +37,7 @@
 
       <xs:complexType name="obtenerCocheporCodigo">
         <xs:sequence>
-          <xs:element name="arg0" type="xs:int" minOccurs="0"/>
+          <xs:element name="codigo" type="xs:int"/>
         </xs:sequence>
       </xs:complexType>
 
