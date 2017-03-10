@@ -1,4 +1,4 @@
-package com.ipartek.formacion.ws;
+package com.ipartek.formacion.ws.coche;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,7 +10,7 @@ import com.ipartek.formacion.pojo.Coche;
 import com.ipartek.formacion.service.CocheService;
 import com.ipartek.formacion.service.CocheServiceImp;
 
-@WebService(serviceName = "cocheservice", wsdlLocation = "Cocheservice.wsdl", endpointInterface = "com.ipartek.formacion.ws.CocheServiceWS")
+@WebService(serviceName = "cocheservice", wsdlLocation = "Cocheservice.wsdl", endpointInterface = "com.ipartek.formacion.ws.coche.CocheServiceWS")
 public class CocheServiceWSImp implements CocheServiceWS {
 
 	public CocheColeccion getAll() {

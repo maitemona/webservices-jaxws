@@ -85,13 +85,28 @@
           <version>2.4.1</version>
           <executions>
               <execution>
-                  <id>generate-wsdl</id>
+                  <id>generate-wsdl-coche</id>
                   <phase>process-classes</phase>
                   <goals>
                       <goal>wsgen</goal>
                   </goals>
                   <configuration>
-                      <sei>com.ipartek.formacion.ws.CocheServiceWSImp</sei>
+                      <sei>com.ipartek.formacion.ws.coche.CocheServiceWSImp</sei>
+                      <genWsdl>true</genWsdl>
+                       <keep>true</keep>
+                       <resourceDestDir>${basedir}/src/main/resources/wsdl</resourceDestDir>
+                  	<sourceDestDir>${basedir}/src/main/java</sourceDestDir>
+                  	<inlineSchemas>true</inlineSchemas>
+                  </configuration>
+              </execution>
+               <execution>
+                  <id>generate-wsdl-pelicula</id>
+                  <phase>process-classes</phase>
+                  <goals>
+                      <goal>wsgen</goal>
+                  </goals>
+                  <configuration>
+                      <sei>com.ipartek.formacion.ws.pelicula.PeliculasServiceWSImp</sei>
                       <genWsdl>true</genWsdl>
                        <keep>true</keep>
                        <resourceDestDir>${basedir}/src/main/resources/wsdl</resourceDestDir>

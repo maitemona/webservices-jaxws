@@ -4,8 +4,11 @@ package com.ipartek.formacion.pojo;
 import java.io.Serializable;
 
 public class Coche implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private int codigo;
-
 	private String nombre;
 
 	public Coche() {

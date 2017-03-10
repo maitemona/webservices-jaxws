@@ -1,12 +1,12 @@
 
-package com.ipartek.formacion.ws.jaxws;
+package com.ipartek.formacion.ws.coche.jaxws;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
-import com.ipartek.formacion.ws.CocheColeccion;
+import com.ipartek.formacion.ws.coche.CocheColeccion;
 
 @XmlRootElement(name = "obtenerTodosResponse", namespace = "http://com.ipartek.formacion/types")
 @XmlAccessorType(XmlAccessType.FIELD)

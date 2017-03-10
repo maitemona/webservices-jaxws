@@ -1,5 +1,5 @@
 
-package com.ipartek.formacion.ws.jaxws;
+package com.ipartek.formacion.ws.coche.jaxws;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -12,7 +12,7 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "obtenerCocheporCodigo", namespace = "http://com.ipartek.formacion/types")
 public class GetById {
 
-    @XmlElement(name = "codigo", namespace = "", required = true)
+    @XmlElement(name = "codigo", namespace = "")
     private Integer codigo;
 
     /**

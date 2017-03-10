@@ -1,27 +1,27 @@
 
-package com.ipartek.formacion.ws.jaxws;
+package com.ipartek.formacion.ws.pelicula.jaxws;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
-import com.ipartek.formacion.pojo.Coche;
+import com.ipartek.formacion.ws.pelicula.PeliculaMensaje;
 
-@XmlRootElement(name = "obtenerCocheporCodigoResponse", namespace = "http://com.ipartek.formacion/types")
+@XmlRootElement(name = "obtenerporidResponse", namespace = "http://com.ipartek.formacion/types")
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "obtenerCocheporCodigoResponse", namespace = "http://com.ipartek.formacion/types")
+@XmlType(name = "obtenerporidResponse", namespace = "http://com.ipartek.formacion/types")
 public class GetByIdResponse {
 
     @XmlElement(name = "return", namespace = "")
-    private Coche _return;
+    private PeliculaMensaje _return;
 
     /**
      * 
      * @return
-     *     returns Coche
+     *     returns PeliculaMensaje
      */
-    public Coche getReturn() {
+    public PeliculaMensaje getReturn() {
         return this._return;
     }
 
@@ -30,7 +30,7 @@ public class GetByIdResponse {
      * @param _return
      *     the value for the _return property
      */
-    public void setReturn(Coche _return) {
+    public void setReturn(PeliculaMensaje _return) {
         this._return = _return;
     }
 

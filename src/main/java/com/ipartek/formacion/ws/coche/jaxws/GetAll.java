@@ -1,5 +1,5 @@
 
-package com.ipartek.formacion.ws.jaxws;
+package com.ipartek.formacion.ws.coche.jaxws;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
