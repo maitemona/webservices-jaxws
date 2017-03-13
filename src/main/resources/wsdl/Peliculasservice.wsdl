@@ -4,9 +4,9 @@
   <types>
     <xs:schema version="1.0" targetNamespace="http://com.ipartek.formacion/types" xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
-      <xs:element name="getAll" type="tns:getAll"/>
+      <xs:element name="obtenerall" type="tns:obtenerall"/>
 
-      <xs:element name="getAllResponse" type="tns:getAllResponse"/>
+      <xs:element name="obtenerallResponse" type="tns:obtenerallResponse"/>
 
       <xs:element name="obtenerporid" type="tns:obtenerporid"/>
 
@@ -46,11 +46,11 @@
         </xs:sequence>
       </xs:complexType>
 
-      <xs:complexType name="getAll">
+      <xs:complexType name="obtenerall">
         <xs:sequence/>
       </xs:complexType>
 
-      <xs:complexType name="getAllResponse">
+      <xs:complexType name="obtenerallResponse">
         <xs:sequence>
           <xs:element name="return" type="tns:peliculaColeccion" minOccurs="0"/>
         </xs:sequence>
@@ -69,20 +69,20 @@
   <message name="obtenerporidResponse">
     <part name="parameters" element="tns:obtenerporidResponse"/>
   </message>
-  <message name="getAll">
-    <part name="parameters" element="tns:getAll"/>
+  <message name="obtenerall">
+    <part name="parameters" element="tns:obtenerall"/>
   </message>
-  <message name="getAllResponse">
-    <part name="parameters" element="tns:getAllResponse"/>
+  <message name="obtenerallResponse">
+    <part name="parameters" element="tns:obtenerallResponse"/>
   </message>
   <portType name="PeliculasServiceWSImp">
     <operation name="obtenerporid">
       <input wsam:Action="http://com.ipartek.formacion/types/PeliculasServiceWSImp/obtenerporidRequest" message="tns:obtenerporid"/>
       <output wsam:Action="http://com.ipartek.formacion/types/PeliculasServiceWSImp/obtenerporidResponse" message="tns:obtenerporidResponse"/>
     </operation>
-    <operation name="getAll">
-      <input wsam:Action="http://com.ipartek.formacion/types/PeliculasServiceWSImp/getAllRequest" message="tns:getAll"/>
-      <output wsam:Action="http://com.ipartek.formacion/types/PeliculasServiceWSImp/getAllResponse" message="tns:getAllResponse"/>
+    <operation name="obtenerall">
+      <input wsam:Action="http://com.ipartek.formacion/types/PeliculasServiceWSImp/obtenerallRequest" message="tns:obtenerall"/>
+      <output wsam:Action="http://com.ipartek.formacion/types/PeliculasServiceWSImp/obtenerallResponse" message="tns:obtenerallResponse"/>
     </operation>
   </portType>
   <binding name="PeliculasServiceWSImpPortBinding" type="tns:PeliculasServiceWSImp">
@@ -96,7 +96,7 @@
         <soap:body use="literal"/>
       </output>
     </operation>
-    <operation name="getAll">
+    <operation name="obtenerall">
       <soap:operation soapAction=""/>
       <input>
         <soap:body use="literal"/>

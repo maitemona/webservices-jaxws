@@ -6,9 +6,9 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
-@XmlRootElement(name = "getAll", namespace = "http://com.ipartek.formacion/types")
+@XmlRootElement(name = "obtenerall", namespace = "http://com.ipartek.formacion/types")
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "getAll", namespace = "http://com.ipartek.formacion/types")
+@XmlType(name = "obtenerall", namespace = "http://com.ipartek.formacion/types")
 public class GetAll {
 
 

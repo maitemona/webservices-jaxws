@@ -8,9 +8,9 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import com.ipartek.formacion.ws.pelicula.PeliculaColeccion;
 
-@XmlRootElement(name = "getAllResponse", namespace = "http://com.ipartek.formacion/types")
+@XmlRootElement(name = "obtenerallResponse", namespace = "http://com.ipartek.formacion/types")
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "getAllResponse", namespace = "http://com.ipartek.formacion/types")
+@XmlType(name = "obtenerallResponse", namespace = "http://com.ipartek.formacion/types")
 public class GetAllResponse {
 
     @XmlElement(name = "return", namespace = "")

@@ -72,7 +72,7 @@ public class PeliculasServiceWSImp {
 		return valida;
 	}
 	
-	@Resource
+	@WebMethod(operationName = "obtenerall")
 	public PeliculaColeccion getAll(){
 	
 		PeliculaService pS = new PeliculaServiceImp();
