@@ -65,4 +65,10 @@ public class PeliculasServiceWSImp {
 
 		return valida;
 	}
+	
+	@Resource
+	public Pelicula getAll(){
+	
+		return null;
+	}
 }
