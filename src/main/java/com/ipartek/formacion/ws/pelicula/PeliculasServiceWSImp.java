@@ -1,7 +1,9 @@
 package com.ipartek.formacion.ws.pelicula;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 import javax.annotation.Resource;
 import javax.jws.WebMethod;
@@ -13,9 +15,13 @@ import javax.jws.soap.SOAPBinding.Use;
 import javax.xml.ws.WebServiceContext;
 import javax.xml.ws.handler.MessageContext;
 
+import com.ipartek.formacion.pojo.Coche;
 import com.ipartek.formacion.pojo.Pelicula;
+import com.ipartek.formacion.service.CocheService;
+import com.ipartek.formacion.service.CocheServiceImp;
 import com.ipartek.formacion.service.PeliculaService;
 import com.ipartek.formacion.service.PeliculaServiceImp;
+import com.ipartek.formacion.ws.coche.CocheColeccion;
 
 @WebService(serviceName = "peliculasservice", portName = "", targetNamespace = "http://com.ipartek.formacion/types")
 @SOAPBinding(style = Style.DOCUMENT, use = Use.LITERAL)
@@ -67,8 +73,13 @@ public class PeliculasServiceWSImp {
 	}
 	
 	@Resource
-	public Pelicula getAll(){
+	public PeliculaColeccion getAll(){
 	
-		return null;
+		PeliculaService pS = new PeliculaServiceImp();
+		PeliculaColeccion coleccion = new PeliculaColeccion();
+		Set<Pelicula> peliculas = pS.getAll();
+		List<Pelicula> peliculaLista = new ArrayList<Pelicula>(peliculas);
+		coleccion.setPelicula(peliculaLista);
+		return coleccion;
 	}
 }
