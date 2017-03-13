@@ -72,14 +72,50 @@ public class PeliculasServiceWSImp {
 		return valida;
 	}
 	
+	private boolean validarUsuario(){
+		boolean valida = false;
+		String usu = "";
+        String pass= "";
+		// WS-Security
+		MessageContext contextoMensajes = webServiceContext.getMessageContext();
+		Map<?, ?> encabezados = (Map<?, ?>) contextoMensajes.get(MessageContext.HTTP_REQUEST_HEADERS);
+		List<?> listausuario = (List<?>) encabezados.get("usuario");
+		List<?> listapassword = (List<?>) encabezados.get("password");
+		// cogemos un identificador
+		 final String usuario = "maite";
+		 final String password= "locodia";
+		if(listausuario!=null){
+        	//get username
+			usu = listausuario.get(0).toString();
+        }
+        if(listapassword!=null){
+        	//get password
+        	pass = listapassword.get(0).toString();
+        }
+        if(usu.equals("maite") && pass.equals("locodia")){
+        	valida= true;
+        }else{
+        	valida= false;
+        }
+        return valida;
+	}
+	
 	@WebMethod(operationName = "obtenerall")
 	public PeliculaColeccion getAll(){
-	
-		PeliculaService pS = new PeliculaServiceImp();
 		PeliculaColeccion coleccion = new PeliculaColeccion();
-		Set<Pelicula> peliculas = pS.getAll();
-		List<Pelicula> peliculaLista = new ArrayList<Pelicula>(peliculas);
-		coleccion.setPelicula(peliculaLista);
+		PeliculaService pS = new PeliculaServiceImp();
+		if (validarUsuario()) {
+			Set<Pelicula> peliculas = pS.getAll();
+			if(peliculas == null){
+				System.out.println("No hay listado de peliculas");
+			}else{
+				List<Pelicula> peliculaLista = new ArrayList<Pelicula>(peliculas);
+				coleccion.setPelicula(peliculaLista);
+			}	
+		}
+		else{
+			System.out.println("No hay listado de peliculas para ver con este usuario");
+		}
 		return coleccion;
 	}
 }
