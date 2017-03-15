@@ -48,26 +48,26 @@
       </xs:complexType>
 </xs:schema>
   </types>
-  <message name="obtenerTodos">
-    <part name="parameters" element="tns:obtenerTodos"/>
-  </message>
-  <message name="obtenerTodosResponse">
-    <part name="parameters" element="tns:obtenerTodosResponse"/>
-  </message>
   <message name="obtenerCocheporCodigo">
     <part name="parameters" element="tns:obtenerCocheporCodigo"/>
   </message>
   <message name="obtenerCocheporCodigoResponse">
     <part name="parameters" element="tns:obtenerCocheporCodigoResponse"/>
   </message>
+  <message name="obtenerTodos">
+    <part name="parameters" element="tns:obtenerTodos"/>
+  </message>
+  <message name="obtenerTodosResponse">
+    <part name="parameters" element="tns:obtenerTodosResponse"/>
+  </message>
   <portType name="cochews">
-    <operation name="obtenerTodos">
-      <input ns1:Action="http://com.ipartek.formacion/types/cochews/obtenerTodosRequest" message="tns:obtenerTodos" xmlns:ns1="http://www.w3.org/2007/05/addressing/metadata"/>
-      <output ns2:Action="http://com.ipartek.formacion/types/cochews/obtenerTodosResponse" message="tns:obtenerTodosResponse" xmlns:ns2="http://www.w3.org/2007/05/addressing/metadata"/>
-    </operation>
     <operation name="obtenerCocheporCodigo">
-      <input ns3:Action="http://com.ipartek.formacion/types/cochews/obtenerCocheporCodigoRequest" message="tns:obtenerCocheporCodigo" xmlns:ns3="http://www.w3.org/2007/05/addressing/metadata"/>
-      <output ns4:Action="http://com.ipartek.formacion/types/cochews/obtenerCocheporCodigoResponse" message="tns:obtenerCocheporCodigoResponse" xmlns:ns4="http://www.w3.org/2007/05/addressing/metadata"/>
+      <input ns1:Action="http://com.ipartek.formacion/types/cochews/obtenerCocheporCodigoRequest" message="tns:obtenerCocheporCodigo" xmlns:ns1="http://www.w3.org/2007/05/addressing/metadata"/>
+      <output ns2:Action="http://com.ipartek.formacion/types/cochews/obtenerCocheporCodigoResponse" message="tns:obtenerCocheporCodigoResponse" xmlns:ns2="http://www.w3.org/2007/05/addressing/metadata"/>
+    </operation>
+    <operation name="obtenerTodos">
+      <input ns3:Action="http://com.ipartek.formacion/types/cochews/obtenerTodosRequest" message="tns:obtenerTodos" xmlns:ns3="http://www.w3.org/2007/05/addressing/metadata"/>
+      <output ns4:Action="http://com.ipartek.formacion/types/cochews/obtenerTodosResponse" message="tns:obtenerTodosResponse" xmlns:ns4="http://www.w3.org/2007/05/addressing/metadata"/>
     </operation>
   </portType>
 </definitions>
